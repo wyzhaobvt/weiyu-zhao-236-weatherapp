@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    
+</head>
+
+<body class="m-4">
+    <div class="ms-auto d-flex justify-content-end">
+    <button type="button" id="unitConvert" class="btn btn-outline-secondary" onclick="unitConvert()" data-bs-toggle="button" disabled>°F / °C</button>
+    </div>
+    <h3 class="text-center display-3 text-secondary">Weather Forecast</h3>
+    
+    <div class="d-flex mt-5 justify-content-center flex-column align-items-center flex-md-row " role="search">
+       
+        <input class="form-control ms-3 w-50 " id="city" type="search"onfocus="removeNotFound()" placeholder="Enter City or Zip Code" aria-label="Search">
+        <button class="btn btn-outline-secondary  ms-3  my-4"  onclick="weatherDetail()"  >Today</button>
+        <button class="btn btn-outline-secondary ms-3 "  onclick="forecastWeather()">Forecast in Four days</button>
+        <small id='notFound' class="text-danger m-3"></small>
+    </div>
+    
+     
+ 
+    <div  class="d-flex flex-md-row justify-content-center mt-5 mb-0 flex-column" id="weather">
+       
+    </div>
+    <div class="container" >
+        <div class="row">
+            
+
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
